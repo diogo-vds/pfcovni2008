@@ -1,0 +1,15 @@
+Id: CDU019
+Nome: Enviar Promocao
+Ator Inicial: Usuario
+Pré-Condição: Produto cadastrado.
+
+Fluxo Principal:	
+	1 – Usuario pesquisa por Tipo de produto ou todos os produtos. E1
+	2 – Usuario seleciona produtos para promocao.
+	3 – Usuario digita a data limite e mensagem da promocao. 
+	4 – Sistema registra promocao.
+	5 – Sistema recupera usuarios que permitiram receber promocao.
+	6 – Para cada usuario, o sistema envia um email com os dados da promocao.
+
+Fluxo de Exceção:
+	E1 – Nenhum produto encontrado.

@@ -1,0 +1,13 @@
+ID: CDU07
+Requisito Relacionado: RF04
+Ator Inicial: Cliente
+Pré-Condição: Cliente ter comprado um produto
+
+Fluxo Principal:
+1 – Cliente envia uma SMS com a frase “Status.NºPedido”
+2 – Palavra “status” ou numero do pedido errados. E1
+3 – Cliente recebe uma SMS com o status do produto.
+4 – Fim
+
+Fluxo de Exceção:
+E1 – Retorna uma SMS de erro (Comando inválido).

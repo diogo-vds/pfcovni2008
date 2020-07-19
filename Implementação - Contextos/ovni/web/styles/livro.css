@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#menu
+{
+	float:left;
+    width: 170px;
+    vertical-align:top;	   	
+    position:relative;
+    min-height:800px;
+	_height:800px;
+    padding-left:1px;
+	background: #C4CBF4;
+	text-align:left	
+	
+}
+
+
+/* menu para livro*/
+
+.menu_cent
+{
+	 height: 21px;  
+	 border: 0px;
+	 color:#A40000;
+	 font-family:Verdana, Arial, Helvetica, sans-serif;
+	 font-size:11px;
+	 font-weight:bold;
+	 background-image:url(imagens/menu_livro.gif);
+	 vertical-align:middle;
+	 text-decoration:none;
+	 _width:36px;
+	 min-width:36px;
+}
+

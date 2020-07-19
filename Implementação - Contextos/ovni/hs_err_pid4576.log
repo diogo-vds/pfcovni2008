@@ -1,0 +1,131 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x6d849cbb, pid=4576, tid=4368
+#
+# Java VM: Java HotSpot(TM) Client VM (1.6.0-b105 mixed mode, sharing)
+# Problematic frame:
+# V  [jvm.dll+0x89cbb]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x02a5bc00):  JavaThread "CompilerThread0" daemon [_thread_in_native, id=4368]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x03fa5828
+
+Registers:
+EAX=0x02a5de00, EBX=0x02a5dab0, ECX=0x03fa5828, EDX=0x03105000
+ESP=0x02d0f80c, EBP=0x0000027b, ESI=0x00000008, EDI=0x02fa5b50
+EIP=0x6d849cbb, EFLAGS=0x00010283
+
+Top of Stack: (sp=0x02d0f80c)
+0x02d0f80c:   02fa5ba8 03103ae0 02a5dab0 02a5dab0
+0x02d0f81c:   6d7ee7b7 02fa5b50 00000370 03103c08
+0x02d0f82c:   03103ae0 02a5dab0 6d7eeed7 02a5dab0
+0x02d0f83c:   00000370 00000370 02d0f914 03103c08
+0x02d0f84c:   6d7f43c3 02a5dab0 00000370 008c0000
+0x02d0f85c:   02d0f914 00000370 6d9ac064 02d0f804
+0x02d0f86c:   00000007 6d981cdc 00000007 6d97c88b
+0x02d0f87c:   03103c08 02d0f914 03103c28 00000370 
+
+Instructions: (pc=0x6d849cbb)
+0x6d849cab:   07 33 f6 85 c0 7e 16 8b 47 0c 8b 0c b0 8b 43 08
+0x6d849cbb:   8b 11 50 ff 52 18 8b 07 46 3b f0 7c ea 55 8b cb 
+
+
+Stack: [0x02cc0000,0x02d10000),  sp=0x02d0f80c,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x89cbb]
+
+
+Current CompileTask:
+C1: 62      org.apache.tools.ant.types.selectors.SelectorUtils.match(Ljava/lang/String;Ljava/lang/String;Z)Z (629 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x02a5fc00 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=4552]
+=>0x02a5bc00 JavaThread "CompilerThread0" daemon [_thread_in_native, id=4368]
+  0x02a59c00 JavaThread "Attach Listener" daemon [_thread_blocked, id=4444]
+  0x02a58c00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=4620]
+  0x02a50c00 JavaThread "Finalizer" daemon [_thread_blocked, id=4500]
+  0x02a4fc00 JavaThread "Reference Handler" daemon [_thread_blocked, id=5816]
+  0x00398c00 JavaThread "main" [_thread_in_vm, id=5836]
+
+Other Threads:
+  0x02a46800 VMThread [id=4588]
+  0x02a61c00 WatcherThread [id=4516]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 960K, used 831K [0x22960000, 0x22a60000, 0x22e40000)
+  eden space 896K,  87% used [0x22960000, 0x22a24a40, 0x22a40000)
+  from space 64K,  70% used [0x22a50000, 0x22a5b468, 0x22a60000)
+  to   space 64K,   0% used [0x22a40000, 0x22a40000, 0x22a50000)
+ tenured generation   total 4096K, used 658K [0x22e40000, 0x23240000, 0x26960000)
+   the space 4096K,  16% used [0x22e40000, 0x22ee48a8, 0x22ee4a00, 0x23240000)
+ compacting perm gen  total 12288K, used 1641K [0x26960000, 0x27560000, 0x2a960000)
+   the space 12288K,  13% used [0x26960000, 0x26afa718, 0x26afa800, 0x27560000)
+    ro space 8192K,  62% used [0x2a960000, 0x2ae5b9c8, 0x2ae5ba00, 0x2b160000)
+    rw space 12288K,  52% used [0x2b160000, 0x2b79e348, 0x2b79e400, 0x2bd60000)
+
+Dynamic libraries:
+0x00400000 - 0x00423000 	C:\Arquivos de programas\Java\jre1.6.0\bin\javaw.exe
+0x7c900000 - 0x7c9b3000 	C:\WINDOWS\system32\ntdll.dll
+0x7c800000 - 0x7c900000 	C:\WINDOWS\system32\kernel32.dll
+0x77f50000 - 0x77ffb000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x77db0000 - 0x77e42000 	C:\WINDOWS\system32\RPCRT4.dll
+0x77f20000 - 0x77f31000 	C:\WINDOWS\system32\Secur32.dll
+0x7e360000 - 0x7e3f1000 	C:\WINDOWS\system32\USER32.dll
+0x77e50000 - 0x77e99000 	C:\WINDOWS\system32\GDI32.dll
+0x76360000 - 0x7637d000 	C:\WINDOWS\system32\IMM32.DLL
+0x7c340000 - 0x7c396000 	C:\Arquivos de programas\Java\jre1.6.0\bin\msvcr71.dll
+0x6d7c0000 - 0x6da07000 	C:\Arquivos de programas\Java\jre1.6.0\bin\client\jvm.dll
+0x76b20000 - 0x76b4e000 	C:\WINDOWS\system32\WINMM.dll
+0x6d310000 - 0x6d318000 	C:\Arquivos de programas\Java\jre1.6.0\bin\hpi.dll
+0x76bd0000 - 0x76bdb000 	C:\WINDOWS\system32\PSAPI.DLL
+0x6d770000 - 0x6d77c000 	C:\Arquivos de programas\Java\jre1.6.0\bin\verify.dll
+0x6d3b0000 - 0x6d3cf000 	C:\Arquivos de programas\Java\jre1.6.0\bin\java.dll
+0x6d7b0000 - 0x6d7bf000 	C:\Arquivos de programas\Java\jre1.6.0\bin\zip.dll
+0x6d570000 - 0x6d583000 	C:\Arquivos de programas\Java\jre1.6.0\bin\net.dll
+0x71a70000 - 0x71a87000 	C:\WINDOWS\system32\WS2_32.dll
+0x77bf0000 - 0x77c48000 	C:\WINDOWS\system32\msvcrt.dll
+0x71a60000 - 0x71a68000 	C:\WINDOWS\system32\WS2HELP.dll
+0x71a10000 - 0x71a50000 	C:\WINDOWS\system32\mswsock.dll
+0x60b30000 - 0x60b88000 	C:\WINDOWS\system32\hnetcfg.dll
+0x59150000 - 0x59157000 	C:\WINDOWS\System32\wship6.dll
+0x71a50000 - 0x71a58000 	C:\WINDOWS\System32\wshtcpip.dll
+
+VM Arguments:
+jvm_args: -Dant.home=C:\Arquivos de programas\eclipse\plugins\org.apache.ant_1.7.0.v200706080842 -Dant.library.dir=C:\Arquivos de programas\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib -Djava.library.path=C:\Arquivos de programas\eclipse;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Arquivos de programas\Java\jre1.6.0\bin\client;C:\Arquivos de programas\Java\jre1.6.0\bin;C:\Arquivos de programas\Arquivos comuns\ArcSoft\Bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;c:\Arquivos de programas\Microsoft SQL Server\90\Tools\binn\;C:\Arquivos de programas\Rational\common;.;C:\Arquivos de programas\Java\jdk1.6.0\bin.;.;C:\Arquivos de programas\Java\jdk1.6.0\lib.;.;C:\Arquivos de programas\Java\jre1.6.0\bin.;.;C:\Arquivos de programas\Java\jre1.6.0\lib.;C:\Arquivos de programas\Apache Software Foundation\Tomcat 5.5\common\lib\servlet-api.jar;C:\Arquivos de programas\eclipse\configuration\org.eclipse.osgi\bundles\334\1\.cp
+java_command: org.eclipse.ant.internal.ui.antsupport.InternalAntRunner -Dorg.eclipse.ant.core.ANT_PROCESS_ID=1219079376203 -Declipse.connect.port=1212 -Declipse.pdebuild.home=/C:/Arquivos de programas/eclipse/plugins/org.eclipse.pde.build_3.3.2.v20071019/./ -Declipse.pdebuild.scripts=/C:/Arquivos de programas/eclipse/plugins/org.eclipse.pde.build_3.3.2.v20071019/scripts/ -Declipse.pdebuild.templates=/C:/Arquivos de programas/eclipse/plugins/org.eclipse.pde.build_3.3.2.v20071019/templates/ -Dant.home=C:\Arquivos de programas\eclipse\plugins\org.apache.ant_1.7.0.v200706080842 -logger org.eclipse.ant.internal.ui.antsupport.logger.RemoteAntBuildLogger -inputhandler org.eclipse.ant.internal.ui.antsupport.inputhandler.ProxyInputHandler -buildfile C:\Documents and Settings\Leo\Desktop\ovni\build.xml
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=.;C:\Arquivos de programas\Java
+CLASSPATH=.;C:\Arquivos de programas\Java\jdk1.6.0\bin.;.;C:\Arquivos de programas\Java\jdk1.6.0\lib.;.;C:\Arquivos de programas\Java\jre1.6.0\bin.;.;C:\Arquivos de programas\Java\jre1.6.0\lib.;C:\Arquivos de programas\Apache Software Foundation\Tomcat 5.5\common\lib\servlet-api.jar
+PATH=C:\Arquivos de programas\Java\jre1.6.0\bin\client;C:\Arquivos de programas\Java\jre1.6.0\bin;C:\Arquivos de programas\Arquivos comuns\ArcSoft\Bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;c:\Arquivos de programas\Microsoft SQL Server\90\Tools\binn\;C:\Arquivos de programas\Rational\common;.;C:\Arquivos de programas\Java\jdk1.6.0\bin.;.;C:\Arquivos de programas\Java\jdk1.6.0\lib.;.;C:\Arquivos de programas\Java\jre1.6.0\bin.;.;C:\Arquivos de programas\Java\jre1.6.0\lib.;C:\Arquivos de programas\Apache Software Foundation\Tomcat 5.5\common\lib\servlet-api.jar
+USERNAME=Leo
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 13, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows XP Build 2600 Service Pack 3
+
+CPU:total 2 family 6, cmov, cx8, fxsr, mmx, sse, sse2
+
+Memory: 4k page, physical 2097151k(2097151k free), swap 4194303k(4194303k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.6.0-b105) for windows-x86, built on Nov 29 2006 00:48:48 by "java_re" with unknown MS VC++:1310
+

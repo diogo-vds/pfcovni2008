@@ -1,0 +1,31 @@
+UC xx - RegistrarSaidaVenda.
+
+Requisitos Relacionados xx
+
+Pré Condição - 
+
+
+Ator Inicial - xx
+
+Fluxo Principal:
+
+1 - Usuário seleciona impimir boleto.
+2 - Sistema busca todos os boletos em aberto do usuário. E1
+3 - Usuário seleciona um boleto da lista
+4 - Sistema exibe boleto na tela.
+
+Classes:
+
+Boleto.
+
+
+Componentes:
+
+Fronteira
+boleto.jsp
+
+Controle
+PesquisarBoleto.java
+
+Negócio
+Boleto.java

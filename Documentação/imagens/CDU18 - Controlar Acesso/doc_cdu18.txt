@@ -1,0 +1,28 @@
+Nome: Controlar Acesso
+Requisitos Relacionados: RNF5
+Ator Inicial: Usuário
+Pré-Condição: -
+
+Fluxo Principal:
+1 - Sistema Solicita Email
+2 - Usuário insere Email => E1
+3 - Sistema Solicita Senha
+4 - Usuário insere Senha => E2
+5 - Sistema Encripta Senha e Email
+6 - Sistema Valida Usuários cadastrados() => FA
+
+Fluxo Alternativo
+Validado = true
+1 - Sistema Registrado Email na Sessão
+2 - Sistema direciona para Página de Central de Usuário
+Validado = false => E3
+
+
+Fluxo de Exceção:
+E1 - Email não foi informado
+E2 - Senha não foi informada
+E3 - Email não encontrado ou a senha está inválida
+
+
+Prioridade:
+Normal.

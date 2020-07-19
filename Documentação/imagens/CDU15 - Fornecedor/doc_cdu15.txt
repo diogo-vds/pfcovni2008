@@ -1,0 +1,45 @@
+Id: CDU15
+Requisitos Relacionados: RF11
+Ator Inicial: Funcionário
+Pré-Condição: Manter dados sobre Fornecedores.
+
+Fluxo Principal:
+1 - Funcionário realiza Efetuar Login.
+FA1
+2 - Fornecedor seleciona opção Gerência de Fornecedores.
+3 - Sistema apresenta tela de Visualização de Fornecedores.
+4 - Funcionário solicita visualizar dados cadastrados.
+5 - Funcionário informa código do fornecedor.
+E1
+6 - Sistema apresenta dados.
+FA2, FA3.
+
+Fluxo Alternativo:
+FA1 - Funcionário seleciona Efetuar Cadastro.
+FA1.1 - Sistema apresenta Tela de Cadastro.
+FA1.2 - Funcionário informa dados do Fornecedor.
+E3
+FA1.3 - Sistema valida e registra novo Fornecedor
+E2
+
+FA2 - Funcionário seleciona atualiza dados pessoais.
+FA2.1 - Funcionário realiza alterações necessárias.
+E3
+FA2.2 - Sistema valida e registra alterações.
+E2
+
+FA3 - Funcionário seleciona excluir cadastro.
+E3
+FA3.1 - Funcionário confirma exclusão.
+FA3.2 - Sistema exclui dados do Fornecedor.
+FA3.3 - Sistema apresenta mensagem de exclusão de cadastro.
+
+Fluxo de Exceção:
+E1 - Caso não for encontrado o fornecedor sistema retornará mensagem.
+
+E2 - Caso exista algum campo inválido ou não preenchido o sistema retornará mensagem indicando os campos inválidos.
+
+E3 - Caso o Funcionário desista o sistema retornará mensagem de cancelamento e apresentará tela principal.
+
+Prioridade:
+Normal.

@@ -1,0 +1,15 @@
+Id: CDU25
+Requisitos Relacionados: RF
+Ator Inicial: Usuário.
+Pré-Condição: Desejar pesquisar os endereços.
+
+Fluxo Principal:
+1 - Usuário seleciona o tipo de pesquisa e informa parametro de pesquisa.
+2 - Sistema Processa busca do usuario e retorna resultado.
+3 - Usuário visualiza endereços encontrados. E1
+
+Fluxo de Exceção: 
+E1 - Caso não seja encontrado nenhum produto, sistema apresenta mensagem.
+
+Prioridade:
+Normal.

@@ -1,0 +1,24 @@
+Id: CDU06
+Nome: Acompanhar Status do Pedido (WAP, Desktop)
+Requisitos Relacionados: RF04
+Ator Inicial: Cliente
+Pré-Condição: Loggin no site.
+
+Fluxo Principal:	
+	1 – Cliente solicita pedidos. Cliente não loggado => E1
+	2 – Cliente escolhe um tipo de pesquisa. Pesquisa por status FA1. Pesquisa por data FA2.
+	3 – Cliente digita o código do pedido. 
+	4 – Sistema retorna o pedido. Pedido não encontrado => E2
+	5 – Cliente solicita visualizar os detalhes do pedido.
+	6 – Sistema retorna detalhes do pedido.
+
+Fluxo Alternativo:
+	FA1 	- Cliente escolhe um tipo de status.
+	FA1.1 	- Sistema retorna lista de pedidos com o status selecionado pelo cliente. Pedido não encontrado => E2.
+
+	FA2 	- Cliente informa data de inicio e fim.
+	FA2.1 	- Sistema retorna lista de pedidos entre a data selecionada pelo cliente. Pedido não encontrado  => E2.
+
+Fluxo de Exceção:
+	E1 – Sistema redireciona o cliente para pagina de acesso.
+	E2 – Sistema apresenta mensagem de pedido não encontrado.

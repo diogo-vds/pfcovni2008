@@ -1,0 +1,15 @@
+Id: CDU02
+Requisitos Relacionados: RF01.
+Ator Inicial: Usuário Móvel.
+Pré-Condição: Sem Pré-Condição.
+
+Fluxo Principal:
+1 - Usuário envia SMS solicitando BUSCA com o Titulo do produto desejado.
+2 - Sistema Processa SMS e envia SMS com os TOP 5 produtos encontrados com o Titulo desejado.
+3 - Usuário recebe SMS com detalhes do produto. E1
+
+Fluxo de Exceção: 
+E1 - Caso não seja encontrado nenhum produto, sistema retorna produtos mais visitados.
+
+Prioridade:
+Normal.

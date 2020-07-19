@@ -1,0 +1,29 @@
+UC xx - AlterarProduto.
+
+Requisitos Relacionados xx
+
+Pré Condição - Estar Logado como funcionário do site.
+
+Ator Inicial - funcionário.
+
+Fluxo Principal:
+
+1 - Usuário seleciona alterar produto.
+2 - Sistema exibe os dados atuais do produto para edição.
+3 - Usuario altera os dados do produto.
+
+
+Classes:
+
+Produto
+
+Componentes:
+
+Fronteira
+alterarproduto.jsp
+
+Controle
+alterarProduto.java
+
+Negócio
+Produto.java

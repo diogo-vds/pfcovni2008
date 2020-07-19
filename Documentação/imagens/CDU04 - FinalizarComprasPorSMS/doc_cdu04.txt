@@ -1,0 +1,18 @@
+Id: CDU04<br/>
+Nome: Finalizar Compras por SMS.<br/>
+Requisitos Relacionados: RF02.<br/>
+Ator Inicial: Usuário Móvel.<br/>
+Pré-Condição: Interesse do Usuário em comprar via SMS e cadastro no site.<br/><br/>
+
+Fluxo Principal:<br/>
+1 - Usuário pesquisa e escolhe produto.<br/>
+2 - Usuário envia SMS com Cod. Produto e Cod. Usuário.<br/>
+4 - Sistema envia dados do Pedido para Operadora Celular.<br/>
+5 - Sistema realiza Confirmar Pagamento. E1.<br/>
+
+Fluxo de Exceção:<br/>
+E1 - Caso de alguma impossibilidade de efetuar a compra a Operadora retornará erro ocorrido.<br/>
+E1.1 - Sistema enviará erro ocorrido para o Usuário.<br/>
+<br/><br/>
+Prioridade:<br/>
+Normal. <br/>

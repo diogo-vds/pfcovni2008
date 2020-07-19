@@ -1,0 +1,19 @@
+Id: CDU10
+Nome: Avaliar Atendimento.
+Requisitos Relacionados: RF06.
+Ator Inicial: Usuário.
+Pré-Condição: Estar logado no sistema e desejar atribuir alguma informação que considere importante ao site.
+
+Fluxo Principal:
+1 - Usuário solicita avaliar atendimento.
+2 - Sistema apresenta tela de avaliação.
+3 - Usuário insere avaliação.
+4 - Sistema registra avaliação do usuário.
+E1
+5 - Sistema retorna mensagem.
+
+Fluxo de Exceção:
+E1 - Caso haja alguma falha o sistema deverá retornar uma mensagem ao usuário.
+
+Prioridade:
+Normal. 

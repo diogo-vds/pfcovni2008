@@ -1,0 +1,33 @@
+UC xx - EmitirRelatorios.
+
+Requisitos Relacionados xx
+
+Pré Condição - Estar Logado como gerente.
+
+Ator Inicial - Gerente
+
+Fluxo Principal:
+
+1 - Usuário seleciona gerar relatorios
+2 - Sistema exibe os tipos de relatórios disponíveis FA1
+3 - Usuário seleciona o tipo de relatório desejado
+4 - Sistema gera o relatório.
+
+FA1 - Usuário poderá selecionar relatório de vendas, 
+
+
+Classes:
+
+GerarRelatorio
+
+Componentes:
+
+Fronteira
+relatorio.jsp
+
+Controle
+GerarRelatorio.java
+
+Negócio
+
+Relatorio.java

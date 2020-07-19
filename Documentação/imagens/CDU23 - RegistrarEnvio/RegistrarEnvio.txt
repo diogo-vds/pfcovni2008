@@ -1,0 +1,40 @@
+UC xx - RegistrarSaidaVenda.
+
+Requisitos Relacionados xx
+
+Pré Condição - 
+	1 - Usuário precisa estar logado no sistema
+
+Ator Inicial - Usuario
+
+Fluxo Principal:
+
+1 - Usuário Seleciona RegistrarEnvio de Produtos
+2 - Sistema retorna lista de produtos aguardando envio - FA1
+3 - Usuario Seleciona o pedido.
+4 - Sistema atualiza a quantidade em estoque - E1
+5 - Sistema atualiza o status do pedido para enviado.
+
+FA1 - Caso não tenha nenhum produto com status "aguardando pagamento" o sistema devera informar ao usuário.
+
+E1 - Caso a quantidade em estoque seja insuficiente, o sistema deverá informar ao usuário que a quantidade em estoque é insuficiente.
+
+
+Classes:
+
+EnviarPedido
+Pedido
+Estoque
+
+Componentes:
+
+Fronteira
+EnviarPEdidos.jsp
+
+Controle
+EnviarPedido
+
+Negócio
+EnviarPedido.java
+Estoque.java
+PedidoDesktopWap

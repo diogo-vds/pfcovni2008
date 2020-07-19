@@ -1,0 +1,15 @@
+Id: CDU21
+Nome: Visualizar Avaliação Atendimento.
+Requisitos Relacionados: RF06.
+Ator Inicial: Usuário.
+Pré-Condição: Deseja visualizar a opinião de usuários da loja.
+
+Fluxo Principal:
+1 - Usuário solicita visualizar avaliações atendimento.
+2 - Sistema apresenta tela popup com avaliações.
+
+Fluxo de Exceção:
+E1 - Caso não haja avaliações o site apressentará mensagem de que não existem avaliações.
+
+Prioridade:
+Normal.

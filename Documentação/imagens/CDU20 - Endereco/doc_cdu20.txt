@@ -1,0 +1,52 @@
+id: CDU12
+Requisitos Relacionados: RF08
+Ator Inicial: Usuário
+Pré-Condição: Manter dados sobre usuários
+
+Fluxo Principal:
+1 - Usuário realiza Efetuar Login.
+FA1
+2 - Usuário seleciona opção Gerência de Usuários.
+3 - Sistema apresenta tela de Visualização de Usuários.
+4 - Usuário solicita visualizar dados cadastrados.
+5 - Sistema apresenta dados.
+FA2, FA3.
+
+Fluxo Alternativo:
+FA1 - Usuário seleciona Efetuar Cadastro.
+FA1.1 - Sistema apresenta tela de verificação de Login.
+FA1.2 - Usuário informa dados para login.
+FA1.3 - Sistema verifica disponibilidade.
+E1
+FA1.4 - Sistema apresenta Tela de Cadastro.
+FA1.5 - Usuário informa dados pessoais, senha e interesse por compra via celular.
+E2
+FA1.6 - Sistema solicita dados para finalizar compras (nº do celular, endereço padrão para envio do produto).
+FA1.7 - Usuário seleciona newsletters para envio de promoções (sms e/ou e-mail).
+FA1.8 - Usuário lê e aceita Termos de uso.
+E3
+FA1.9 - Sistema valida e registra novo Usuário
+E2
+FA1.10 - Sistema envia SMS e/ou E-mail de confirmação de cadastro com dados para o login.
+
+FA2 - Usuário seleciona atualiza dados pessoais.
+FA2.1 - Usuário realiza alterações necessárias.
+FA2.2 - Sistema valida e registra alterações.
+E2
+FA2.3 - Sistema apresenta mensagem de sucesso.
+
+FA3 - Usuário seleciona excluir cadastro.
+FA3.1 - Usuário confirma exclusão.
+E3
+FA3.2 - Sistema exclui dados do Usuário.
+FA3.3 - Sistema apresenta mensagem de exclusão de cadastro e tela principal.
+
+Fluxo de Exceção:
+E1 - Caso houver algum usuário já cadastrado com o login informado o sistema solicitará a escolha de novo login.
+
+E2 - Caso exista algum campo inválido ou não preenchido o sistema retornará mensagem indicando os campos inválidos.
+
+E3 - Caso o Usuário desista o sistema retornará mensagem de cancelamento e apresentará tela principal.
+
+Prioridade:
+Normal. 	 

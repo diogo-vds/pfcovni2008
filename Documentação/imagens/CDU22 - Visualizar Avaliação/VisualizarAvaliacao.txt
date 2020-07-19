@@ -1,0 +1,35 @@
+ID: CDU22
+Nome: Visualizar Avaliação.
+
+Requisitos Relacionados xx
+
+Pré Condição - 
+
+
+Ator Inicial - xx
+
+Fluxo Principal:
+
+1 - Usuário seleciona Visualizar detalhes do produto.
+2 - Sistema Traz os detalhes do Produto e as Avaliações.
+3 - Usuário insere avaliação. FA1
+
+FA1 -> O usuário seleciona avaliar e executa o caso de uso Avaliar Produto
+
+Classes:
+Produto.
+Avaliacao.
+
+Componentes:
+
+Fronteira
+detalhesproduto.jsp
+
+
+Controle
+ExibirDetalhesProduto.java
+
+Negócio
+
+Avaliacao.java
+Produto

@@ -1,0 +1,30 @@
+Id: CDU11
+Nome: Gerência de Carrinho de Compras
+Requisitos Relacionados: RF07
+Ator Inicial: Cliente
+Pré-Condição: Produtos em estoque.
+
+Fluxo Principal:	
+	1 - Cliente solicita visualizar carrinho.
+	2 - Sistema apresenta a pagina do carrinho com os itens. Sem item => E1.
+FA1, FA2, FA3.	
+
+Fluxo Alternativo:
+	FA1 	- Cliente solicita inserir produto no carrinho.
+	FA1.1 	- Sistema calcula valor Total e registra Produto no carrinho. Produto já registrado => E2.
+	FA1.2 	- Sistema apresenta o carrinho.
+
+	FA2 	- Cliente informa quantidade nova. Quantidade acima de 4 => E3
+	FA2.1 	- Sistema calcula valor total e atualiza carrinho.
+	FA2.2 	- Sistema apresenta o carrinho.
+	
+	FA3 	- Cliente seleciona produto para excluír.
+	FA3.1	- Sistema exclui o produto selecionado do carrinho. Produto não encontrado => E4.
+	FA3.2 	- Sistema calcula valor total e atualiza carrinho.
+	FA3.3 	- Sistema apresenta o carrinho.
+
+Fluxo de Exceção:
+	E1 – Caso não exista produtos no carrinho sistema retornará mensagem da inexistência de produtos.
+	E2 – Sistema não registra o produto novamente e retorna o carrinho sem alterações.
+	E3 – Sistema alerta para quantidade inválida.
+	E4 – Sistema alerta para produto não encontrado.

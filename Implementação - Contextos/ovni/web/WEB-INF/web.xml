@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+<filter>
+	<filter-name>LogginFilter</filter-name>
+	<filter-class>ovni.filtros.LogginFilter</filter-class>
+</filter>
+
+<filter>
+	<filter-name>AdminFilter</filter-name>
+	<filter-class>ovni.filtros.AdminFilter</filter-class>
+</filter>
+
+<!-- filtros para Usuários Autenticados -->
+
+<filter-mapping>
+    <filter-name>LogginFilter</filter-name>
+    <url-pattern>/loggin/*</url-pattern>
+</filter-mapping>
+
+<filter-mapping>
+    <filter-name>LogginFilter</filter-name>
+    <url-pattern>/FinalizarPedidoDesktopWAP</url-pattern>
+</filter-mapping>
+
+<filter-mapping>
+    <filter-name>LogginFilter</filter-name>
+    <url-pattern>/VisualizarUsuario</url-pattern>
+</filter-mapping>
+
+<filter-mapping>
+    <filter-name>LogginFilter</filter-name>
+    <url-pattern>/AvaliarProduto</url-pattern>
+</filter-mapping>
+
+<filter-mapping>
+    <filter-name>LogginFilter</filter-name>
+    <url-pattern>/wap/central_usuario.jsp</url-pattern>
+</filter-mapping>
+
+<filter-mapping>
+    <filter-name>LogginFilter</filter-name>
+    <url-pattern>/AvaliarProduto</url-pattern>
+</filter-mapping>
+
+<filter-mapping>
+    <filter-name>LogginFilter</filter-name>
+    <url-pattern>/Administracao</url-pattern>
+</filter-mapping> 
+
+<filter-mapping>
+    <filter-name>LogginFilter</filter-name>
+    <url-pattern>/admin/*</url-pattern>
+</filter-mapping> 
+
+<!-- Autorização -->
+
+<filter-mapping>
+    <filter-name>AdminFilter</filter-name>
+    <url-pattern>/Administracao</url-pattern>
+</filter-mapping> 
+
+<filter-mapping>
+    <filter-name>AdminFilter</filter-name>
+    <url-pattern>/AtualizarEmpresa</url-pattern>
+</filter-mapping> 
+
+<filter-mapping>
+    <filter-name>AdminFilter</filter-name>
+    <url-pattern>/DadosEmpresa</url-pattern>
+</filter-mapping>
+
+<filter-mapping>
+    <filter-name>AdminFilter</filter-name>
+    <url-pattern>/admin/*</url-pattern>
+</filter-mapping>
+
+<!-- Autorização -->
+
+    <servlet>
+        <servlet-name>dev-invoker</servlet-name>
+        <servlet-class>org.apache.catalina.servlets.InvokerServlet</servlet-class>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>0</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
+        </servlet>   
+    <servlet-mapping>
+        <servlet-name>dev-invoker</servlet-name>
+        <url-pattern>/servlet/*</url-pattern>
+    </servlet-mapping>
+    
+- <servlet>
+  <servlet-name>RegistrarMovimento</servlet-name> 
+  <servlet-class>ovni.controle.movimento.RegistrarMovimento</servlet-class> 
+  </servlet>
+  
+- <servlet>
+  <servlet-name>Upload</servlet-name> 
+  <servlet-class>ovni.controle.produtos.Upload</servlet-class> 
+  </servlet>
+
+- <servlet>
+  <servlet-name>GerarRelatorio</servlet-name> 
+  <servlet-class>ovni.controle.relatorio.GerarRelatorio</servlet-class> 
+  </servlet>
+
+
+- <servlet>
+  <servlet-name>RegistrarEnvio</servlet-name> 
+  <servlet-class>ovni.controle.movimento.EnviarPedido</servlet-class> 
+  </servlet>
+
+- <servlet>
+  <servlet-name>EditarProduto</servlet-name> 
+  <servlet-class>ovni.controle.produtos.EditarProduto</servlet-class> 
+  </servlet>
+  
+  <servlet>
+   <servlet-name>Administracao</servlet-name> 
+   <servlet-class>ovni.controle.administracao.Administracao</servlet-class> 
+  </servlet>
+  
+  <servlet>
+   <servlet-name>DadosEmpresa</servlet-name> 
+   <servlet-class>ovni.controle.administracao.DadosEmpresa</servlet-class> 
+  </servlet>
+  
+  <servlet>
+   <servlet-name>AtualizarEmpresa</servlet-name> 
+   <servlet-class>ovni.controle.administracao.AtualizarEmpresa</servlet-class> 
+  </servlet>
+
+- <servlet>
+  <servlet-name>PesquisarProdutos</servlet-name> 
+  <servlet-class>ovni.controle.produtos.PesquisarProdutos</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>ManterBoleto</servlet-name> 
+  <servlet-class>ovni.controle.produtos.ManterBoleto</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>AvaliarProduto</servlet-name> 
+  <servlet-class>ovni.controle.produtos.AvaliarProduto</servlet-class> 
+  </servlet>
+  
+- <servlet>
+  <servlet-name>VisualizarDetalhes</servlet-name> 
+  <servlet-class>ovni.controle.produtos.VisualizarDetalhes</servlet-class> 
+  </servlet>
+  
+  <servlet>
+  <servlet-name>VisualizarDetalhesProduto</servlet-name> 
+  <servlet-class>ovni.controle.produtos.VisualizarDetalhesProduto</servlet-class> 
+  </servlet>
+  
+- <servlet>
+  <servlet-name>InserirCarrinho</servlet-name> 
+  <servlet-class>ovni.controle.carrinho.InserirCarrinho</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>ExcluirCarrinho</servlet-name> 
+  <servlet-class>ovni.controle.carrinho.ExcluirCarrinho</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>AlterarCarrinho</servlet-name> 
+  <servlet-class>ovni.controle.carrinho.AlterarCarrinho</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>InserirProduto</servlet-name> 
+  <servlet-class>ovni.controle.produtos.InserirProduto</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>AlterarProduto</servlet-name> 
+  <servlet-class>ovni.controle.produtos.AlterarProduto</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>ExcluirProduto</servlet-name> 
+  <servlet-class>ovni.controle.produtos.ExcluirProduto</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>InserirFornecedor</servlet-name> 
+  <servlet-class>ovni.controle.fornecedor.InserirFornecedor</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>AlterarFornecedor</servlet-name> 
+  <servlet-class>ovni.controle.fornecedor.AlterarFornecedor</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>ExcluirFornecedor</servlet-name> 
+  <servlet-class>ovni.controle.fornecedor.ExcluirFornecedor</servlet-class> 
+  </servlet>
+  <servlet>
+  <servlet-name>PesquisarFornecedor</servlet-name> 
+  <servlet-class>ovni.controle.fornecedor.PesquisarFornecedor</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>VisualizarDetalhesFornecedor</servlet-name> 
+  <servlet-class>ovni.controle.fornecedor.VisualizarDetalhesFornecedor</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>InserirUsuario</servlet-name> 
+  <servlet-class>ovni.controle.usuario.InserirUsuario</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>AlterarUsuario</servlet-name> 
+  <servlet-class>ovni.controle.usuario.AlterarUsuario</servlet-class> 
+  </servlet>
+- <servlet>
+  <servlet-name>ExcluirUsuario</servlet-name> 
+  <servlet-class>ovni.controle.usuario.ExcluirUsuario</servlet-class> 
+  </servlet>
+  <servlet>
+  <servlet-name>InserirEndereco</servlet-name> 
+  <servlet-class>ovni.controle.endereco.InserirEndereco</servlet-class> 
+  </servlet>
+  <servlet>
+  <servlet-name>AlterarEndereco</servlet-name> 
+  <servlet-class>ovni.controle.endereco.AlterarEndereco</servlet-class> 
+  </servlet>
+  <servlet>
+  <servlet-name>PesquisarEndereco</servlet-name> 
+  <servlet-class>ovni.controle.endereco.PesquisarEndereco</servlet-class> 
+  </servlet>
+  <servlet>
+  <servlet-name>ExcluirEndereco</servlet-name> 
+  <servlet-class>ovni.controle.endereco.ExcluirEndereco</servlet-class> 
+  </servlet>
+  
+  <servlet>
+  <servlet-name>VisualizarUsuario</servlet-name> 
+  <servlet-class>ovni.controle.usuario.VisualizarUsuario</servlet-class> 
+  </servlet>
+  
+  <servlet>
+  <servlet-name>ControleAcesso</servlet-name> 
+  <servlet-class>ovni.controle.usuario.ControleAcesso</servlet-class> 
+  </servlet>
+  
+  <servlet>
+  <servlet-name>ControleSMS</servlet-name> 
+  <servlet-class>ovni.controle.sms.ControleSMS</servlet-class> 
+  </servlet>
+  
+  <servlet>
+  <servlet-name>MontarVitrine</servlet-name> 
+  <servlet-class>ovni.controle.produtos.MontarVitrine</servlet-class> 
+  </servlet>
+
+  <servlet>
+  <servlet-name>InserirAvaliacaoSite</servlet-name> 
+  <servlet-class>ovni.controle.atendimento.InserirAvaliacaoSite</servlet-class> 
+  </servlet>
+  
+  <servlet>
+  <servlet-name>VisualizarAvaliacoes</servlet-name> 
+  <servlet-class>ovni.controle.atendimento.VisualizarAvaliacoes</servlet-class> 
+  </servlet>
+  
+  <servlet>
+  <servlet-name>VisualizarDetalhesEndereco</servlet-name> 
+  <servlet-class>ovni.controle.endereco.VisualizarDetalhesEndereco</servlet-class> 
+  </servlet>
+  
+- <servlet-mapping>
+  <servlet-name>dev-invoker</servlet-name> 
+  <url-pattern>/servlet/*</url-pattern> 
+  </servlet-mapping>
+
+- <servlet-mapping>
+  <servlet-name>Administracao</servlet-name> 
+  <url-pattern>/Administracao</url-pattern> 
+  </servlet-mapping>
+
+- <servlet-mapping>
+  <servlet-name>RegistrarMovimento</servlet-name> 
+  <url-pattern>/RegistrarMovimento</url-pattern> 
+  </servlet-mapping>
+
+- <servlet-mapping>
+  <servlet-name>GerarRelatorio</servlet-name> 
+  <url-pattern>/GerarRelatorio</url-pattern> 
+  </servlet-mapping>
+
+- <servlet-mapping>
+  <servlet-name>EditarProduto</servlet-name> 
+  <url-pattern>/EditarProduto</url-pattern> 
+  </servlet-mapping>
+
+- <servlet-mapping>
+  <servlet-name>RegistrarEnvio</servlet-name> 
+  <url-pattern>/RegistrarEnvio</url-pattern> 
+  </servlet-mapping>
+    
+- <servlet-mapping>
+  <servlet-name>Upload</servlet-name> 
+  <url-pattern>/Upload</url-pattern> 
+  </servlet-mapping>
+  
+- <servlet-mapping>
+  <servlet-name>PesquisarProdutos</servlet-name> 
+  <url-pattern>/PesquisarProdutos</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>AvaliarProduto</servlet-name> 
+  <url-pattern>/AvaliarProduto</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>ManterBoleto</servlet-name> 
+  <url-pattern>/ManterBoleto</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>VisualizarDetalhes</servlet-name> 
+  <url-pattern>/VisualizarDetalhes</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>VisualizarDetalhesProduto</servlet-name> 
+  <url-pattern>/VisualizarDetalhesProduto</url-pattern> 
+  </servlet-mapping>
+  
+- <servlet-mapping>
+  <servlet-name>InserirCarrinho</servlet-name> 
+  <url-pattern>/InserirCarrinho</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>AlterarProduto</servlet-name> 
+  <url-pattern>/AlterarProduto</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>ExcluirCarrinho</servlet-name> 
+  <url-pattern>/ExcluirCarrinho</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>AlterarCarrinho</servlet-name> 
+  <url-pattern>/AlterarCarrinho</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>InserirProduto</servlet-name> 
+  <url-pattern>/InserirProduto</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>ExcluirProduto</servlet-name> 
+  <url-pattern>/ExcluirProduto</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>InserirFornecedor</servlet-name> 
+  <url-pattern>/InserirFornecedor</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>AlterarFornecedor</servlet-name> 
+  <url-pattern>/AlterarFornecedor</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>ExcluirFornecedor</servlet-name> 
+  <url-pattern>/ExcluirFornecedor</url-pattern> 
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>PesquisarFornecedor</servlet-name> 
+  <url-pattern>/PesquisarFornecedor</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>VisualizarDetalhesFornecedor</servlet-name> 
+  <url-pattern>/VisualizarDetalhesFornecedor</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>InserirUsuario</servlet-name> 
+  <url-pattern>/InserirUsuario</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>AlterarUsuario</servlet-name> 
+  <url-pattern>/AlterarUsuario</url-pattern> 
+  </servlet-mapping>
+- <servlet-mapping>
+  <servlet-name>ExcluirUsuario</servlet-name> 
+  <url-pattern>/ExcluirUsuario</url-pattern> 
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>InserirEndereco</servlet-name> 
+  <url-pattern>/InserirEndereco</url-pattern>   
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>AlterarEndereco</servlet-name> 
+  <url-pattern>/AlterarEndereco</url-pattern> 
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>PesquisarEndereco</servlet-name> 
+  <url-pattern>/PesquisarEndereco</url-pattern> 
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>ExcluirEndereco</servlet-name> 
+  <url-pattern>/ExcluirEndereco</url-pattern> 
+  </servlet-mapping>
+  
+
+<servlet-mapping>
+ <servlet-name>VisualizarUsuario</servlet-name> 
+ <url-pattern>/VisualizarUsuario</url-pattern>
+</servlet-mapping>
+    
+ <servlet-mapping>
+    <servlet-name>ControleAcesso</servlet-name> 
+  <url-pattern>/ControleAcesso</url-pattern> 
+</servlet-mapping> 
+
+<servlet-mapping>
+  <servlet-name>ControleSMS</servlet-name> 
+  <url-pattern>/ControleSMS</url-pattern>
+ </servlet-mapping>
+  
+ <servlet-mapping>
+   <servlet-name>MontarVitrine</servlet-name> 
+ <url-pattern>/MontarVitrine</url-pattern>   
+ </servlet-mapping>
+ 
+<servlet>
+  <servlet-name>FinalizarPedidoDesktopWAP</servlet-name> 
+  <servlet-class>ovni.controle.pedidoDesktopWAP.FinalizarPedidoDesktopWAP</servlet-class> 
+</servlet>
+<servlet-mapping>
+ <servlet-name>FinalizarPedidoDesktopWAP</servlet-name> 
+ <url-pattern>/FinalizarPedidoDesktopWAP</url-pattern>   
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>PesquisarPedido</servlet-name> 
+  <servlet-class>ovni.controle.pedidoDesktopWAP.PesquisarPedido</servlet-class> 
+</servlet>
+<servlet-mapping>
+ <servlet-name>PesquisarPedido</servlet-name> 
+ <url-pattern>/PesquisarPedido</url-pattern>   
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>VisualizarCarrinho</servlet-name> 
+  <servlet-class>ovni.controle.carrinho.VisualizarCarrinho</servlet-class> 
+</servlet>
+
+<servlet-mapping>
+ <servlet-name>VisualizarCarrinho</servlet-name> 
+ <url-pattern>/VisualizarCarrinho</url-pattern>   
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>VisualizarDetalhesPedido</servlet-name> 
+  <servlet-class>ovni.controle.pedidoDesktopWAP.VisualizarDetalhesPedido</servlet-class> 
+</servlet>
+
+<servlet-mapping>
+ <servlet-name>VisualizarDetalhesPedido</servlet-name> 
+ <url-pattern>/VisualizarDetalhesPedido</url-pattern>   
+</servlet-mapping>
+
+<servlet-mapping>
+  <servlet-name>InserirAvaliacaoSite</servlet-name> 
+  <url-pattern>/InserirAvaliacaoSite</url-pattern> 
+  </servlet-mapping>
+
+<servlet-mapping>
+  <servlet-name>VisualizarAvaliacoes</servlet-name> 
+  <url-pattern>/VisualizarAvaliacoes</url-pattern> 
+  </servlet-mapping>
+ 
+<servlet-mapping>
+    <servlet-name>ControleSMS</servlet-name> 
+  <url-pattern>/ControleSMS</url-pattern> 
+</servlet-mapping> 
+
+<servlet>
+  <servlet-name>AlterarPedido</servlet-name> 
+  <servlet-class>ovni.controle.pedidoDesktopWAP.AlterarPedido</servlet-class> 
+</servlet>
+
+<servlet-mapping>
+ <servlet-name>AlterarPedido</servlet-name> 
+ <url-pattern>/AlterarPedido</url-pattern>   
+</servlet-mapping>
+
+<servlet-mapping>
+ <servlet-name>VisualizarDetalhesEndereco</servlet-name> 
+ <url-pattern>/VisualizarDetalhesEndereco</url-pattern>   
+</servlet-mapping>
+
+<servlet-mapping>
+ <servlet-name>DadosEmpresa</servlet-name> 
+ <url-pattern>/DadosEmpresa</url-pattern>   
+</servlet-mapping>
+
+<servlet-mapping>
+ <servlet-name>AtualizarEmpresa</servlet-name> 
+ <url-pattern>/AtualizarEmpresa</url-pattern>   
+</servlet-mapping> 
+
+<servlet>
+  <servlet-name>CalcularFrete</servlet-name> 
+  <servlet-class>ovni.controle.carrinho.CalcularFrete</servlet-class> 
+</servlet>
+<servlet-mapping>
+  <servlet-name>CalcularFrete</servlet-name> 
+  <url-pattern>/CalcularFrete</url-pattern> 
+</servlet-mapping>
+
+
+<servlet>
+  <servlet-name>Promocao</servlet-name> 
+  <servlet-class>ovni.controle.promocao.ManterPromocao</servlet-class> 
+</servlet>
+
+<servlet-mapping>
+ <servlet-name>Promocao</servlet-name> 
+ <url-pattern>/Promocao</url-pattern>   
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>ConfirmarPagamento</servlet-name> 
+  <servlet-class>ovni.controle.pedidoDesktopWAP.ConfirmarPagamento</servlet-class> 
+</servlet>
+
+<servlet-mapping>
+ <servlet-name>ConfirmarPagamento</servlet-name> 
+ <url-pattern>/ConfirmarPagamento</url-pattern>   
+</servlet-mapping>
+
+
+<session-config>
+    <session-timeout>
+        30
+    </session-timeout>
+</session-config>
+
+<welcome-file-list>
+    <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

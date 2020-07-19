@@ -1,0 +1,46 @@
+
+<!-- Copyright (c) 2002 by ObjectLearn. All Rights Reserved. -->
+<project name="webmodulebuilder"  default="deployFiles"  basedir=".">
+
+
+  <!-- set global properties for this build -->
+  <property name="serverhome" value="C:\ovni" /> 
+  <property name="war" value="ovni" /> 
+  <property name="dist" value="${serverhome}/web" />
+  
+  <property name="build" value="build" />
+  <property name="web" value="web" />
+  <property name="lib" value="lib" />
+
+  <!-- Disponibiliza para Distribuicao -->
+  <target name="deployFiles" >
+    <mkdir dir="${dist}"/>
+
+    <copy todir="${dist}">
+      <fileset dir="${web}" />
+    </copy>
+    
+    <copy todir="${dist}/WEB-INF/classes">
+      <fileset dir="${build}" />
+    </copy>
+    
+    <copy todir="${dist}/WEB-INF/lib">
+      <fileset dir="${lib}" />
+    </copy>    
+  </target>
+  
+
+  <!-- Gera o war no servidor -->
+  <target name="deployWar" depends="undeployWar" >
+	<jar jarfile="${serverhome}/${war}.war" basedir="${dist}"/>
+	<delete dir="${serverhome}/${war}" failonerror="false" />
+  </target>
+
+  
+   <!--Apaga o war  no servidor-->  
+  <target name="undeployWar" >
+  	<delete file="${serverhome}/${war}.war" failonerror="false" />
+  </target>
+  
+
+</project>

@@ -1,0 +1,32 @@
+UC xx - RegistrarSaidaVenda.
+
+Requisitos Relacionados xx
+
+Pré Condição - 
+
+
+Ator Inicial - xx
+
+Fluxo Principal:
+
+1 - Usuário seleciona avaliar produto.
+2 - Sistema verifica se o usuário já avaliou o produto. E1
+3 - Usuário insere avaliação.
+
+Classes:
+
+Avaliacao.
+
+
+Componentes:
+
+Fronteira
+avaliarproduto.jsp
+
+
+Controle
+AvaliarProduto.java
+
+Negócio
+
+Avaliacao.java

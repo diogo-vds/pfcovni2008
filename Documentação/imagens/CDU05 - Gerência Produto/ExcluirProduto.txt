@@ -1,0 +1,29 @@
+UC xx - ExcluirProduto.
+
+Requisitos Relacionados xx
+
+Pré Condição - Estar Logado como funcionário do site.
+
+Ator Inicial - funcionário.
+
+Fluxo Principal:
+
+1 - Usuário seleciona excluir produto.
+2 - Sistema exibe os dados atuais do produto.
+3 - Usuario confirma exclusão do produto.
+
+
+Classes:
+
+Produto
+
+Componentes:
+
+Fronteira
+excluirproduto.jsp
+
+Controle
+ExcluirProduto.java
+
+Negócio
+Produto.java

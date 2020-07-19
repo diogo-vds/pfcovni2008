@@ -1,0 +1,32 @@
+Finalizar Compras
+
+ID: CDU03
+
+Requisito Relacionado: RF02
+
+Ator Inicial: Cliente
+
+Pré-Condição: possuir produtos no carrinho.
+
+Fluxo Principal:
+01 – Cliente seleciona finalizar compra.
+02 – Cliente não loggado => E1.
+03 – Cliente seleciona endereco
+04 – Sistema inseri os itens do carrinho, dados do usuário e o endereço escolhido em uma pré venda.
+05 – Cliente escolhe a forma de pagamento.
+06 – Forma de pagamento por cartão => FA1
+07 – O sistema adiciona a forma de pagamento a pré venda
+08 – Cliente confirma os dados.
+09 – Atualiza estoque. Sem estoque disponível E2.
+10 – O sistema finaliza o pedido.
+11 – Envia email.
+
+Fluxos Alternativos:
+FA 1:
+01 – Cliente inseri os dados do cartão.
+02 – O sistema adiciona os dados do cartão a pré venda.
+03 – Fim.
+
+Fluxos de Exceções:
+E1 – Redirecionado para pagina de acesso.
+E2 – Pagina de erro com o aviso de produto com falta em estoque.

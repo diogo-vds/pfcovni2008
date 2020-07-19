@@ -1,0 +1,15 @@
+Id: CDU01
+Requisitos Relacionados: RF01.
+Ator Inicial: Usuário Móvel.
+Pré-Condição: Sem Pré-Condição.
+
+Fluxo Principal:
+1 - Usuário insere um parâmetro para busca
+2 - Sistema procura por produtos encontrados com o Titulo desejado ou artisa relacionado com o parâmetro da busca.
+3 - Usuário visualiza itens da pesquisa. E1
+
+Fluxo de Exceção: 
+E1 - Caso não seja encontrado nenhum produto, sistema retorna mensagem que não foi encontrado nenhum produto.
+
+Prioridade:
+Normal.

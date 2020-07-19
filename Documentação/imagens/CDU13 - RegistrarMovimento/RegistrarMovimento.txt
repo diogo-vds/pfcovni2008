@@ -1,0 +1,37 @@
+UC xx - RegistrarSaidaVenda.
+
+Requisitos Relacionados xx
+
+Pré Condição - 
+	1 - Usuário precisa estar logado no sistema
+
+Ator Inicial - Usuario
+
+Fluxo Principal:
+
+1 - Usuário Seleciona Registrar movimento de Produtos
+2 - Usuário informa o código do produto, tipo de movimento e a quantidade. - FA1
+3 - Usuário seleciona Registrar Movimento.
+
+FA1 - Caso o produto não esteja cadastrado, o usuário deverá inserir o produto primeiro.
+
+
+Classes:
+
+Movimento
+Produto
+Estoque
+
+Componentes:
+
+Fronteira
+EnviarPEdidos.jsp
+
+Controle
+RegistrarMovimento.java
+
+Negócio
+
+RegistrarMovimento.java
+Estoque.java
+PedidoDesktopWap.java

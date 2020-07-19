@@ -1,0 +1,28 @@
+UC xx - VisualizarProduto.
+
+Requisitos Relacionados xx
+
+Pré Condição - Estar Logado como funcionário do site.
+
+Ator Inicial - funcionário.
+
+Fluxo Principal:
+
+1 - Usuário seleciona visualizar detalhes produto.
+2 - Sistema exibe os dados do produto.
+
+Classes:
+
+Produto
+
+Componentes:
+
+Fronteira
+detalhesProduto.jsp
+
+Controle
+DetalhesProduto.java
+
+Negócio
+Produto.java
+Avaliacao

@@ -1,0 +1,26 @@
+Id: CDU16
+Nome: Alterar Pedido	
+Requisitos Relacionados: RF12
+Ator Inicial: Usuário
+Pré-Condição: Compras no site.
+
+Fluxo Principal:	
+	1 – Usuário informa qual tipo de pesquisa deseja. Por Status => FA1. Por Data => FA2
+	2 – Usuário informa código do pedido.
+	3 – Sistema retorna o pedido. Pedido não encontrado => E1
+	5 – Usuário solicita visualizar os detalhes do pedido.
+	6 – Sistema retorna detalhes do pedido.
+	7 - Usuário inseri a alteração.
+	8 - Usuário solicita registrar. Erro no registro => E2
+	9 - Sistema retorna para pagina inicial de Administração.
+
+Fluxo Alternativo:
+	FA1 	- Usuário escolhe um tipo de status.
+	FA1.1 	- Sistema retorna lista de pedidos com o status selecionado pelo Usuário . Pedido não encontrado => E1.
+
+	FA2 	- Usuário informa data de inicio e fim.
+	FA2.1 	- Sistema retorna lista de pedidos entre a data selecionada pelo Usuário . Pedido não encontrado  => E1.
+
+Fluxo de Exceção:
+	E1 – Sistema apresenta mensagem de nenhum pedido encontrado.
+	E2 - Sistema apresenta o erro ocorrido.

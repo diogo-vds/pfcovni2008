@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Context path="/ovni" docBase="C:\ovni\web"
+ reloadable="true" crossContext="true" debug="3">
+	<Logger className="org.apache.catalina.logger.FileLogger"
+	 prefix="localhost_dev_log." suffix=".txt" timestamp="true"
+	 verbosity="4" />
+</Context>

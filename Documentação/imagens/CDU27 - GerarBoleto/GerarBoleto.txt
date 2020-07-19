@@ -1,0 +1,30 @@
+UC xx - RegistrarSaidaVenda.
+
+Requisitos Relacionados xx
+
+Pré Condição - 
+
+
+Ator Inicial - xx
+
+Fluxo Principal:
+
+1 - Usuário Realiza compra e escolhe pagamento por boleto.
+2 - Sistema pega todas as informações de venda e gera o boleto.
+3 - Sistema salva o boleto e informa ao usuário.
+
+Classes:
+
+Boleto.
+
+
+Componentes:
+
+Fronteira
+boleto.jsp
+
+Controle
+-
+
+Negócio
+Boleto.java

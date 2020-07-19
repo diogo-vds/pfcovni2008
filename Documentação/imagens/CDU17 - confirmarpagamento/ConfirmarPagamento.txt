@@ -1,0 +1,21 @@
+Id: CDU17
+Nome: Confirmar Pagamento
+Requisitos Relacionados: RF13
+Ator Inicial: Usuário
+Pré-Condição: Compras no site.
+
+Fluxo Principal:	
+	1 – Usuário informa qual tipo de confirmação deseja. Confirmar Cartão de Crédito => FA1. Confirmar SMS => FA2.
+	2 – Usuário seleciona o arquivo de remessa do banco.
+	3 – Usuário seleciona confirmar pagamento de boleto. 
+	4 – Sistema atualiza os pedidos pagos com data, hora atual e status para “Pago – Aguardo Envio” .
+	5 – Sistema retorna a pagina inicial de administração.
+
+Fluxo Alternativo:
+	FA1 	- Usuário seleciona confirmar pagamento por cartão de credito.
+	FA1.1 	- Sistema atualiza os pedidos pagos com data, hora atual e status para “Pago – Aguardo Envio”
+	FA1.2	- Sistema retorna a pagina inicial de administração.
+
+	FA2	- Usuário seleciona confirmar pagamento por sms.
+	FA2.1 	- Sistema atualiza os pedidos pagos com status para “Pago – Aguardo Envio”
+	FA2.2	- Sistema retorna a pagina inicial de administração.
